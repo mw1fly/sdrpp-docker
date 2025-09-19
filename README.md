@@ -19,7 +19,7 @@ The goal is to provide a clean, reproducible environment with GPU acceleration a
 Clone this repo and build the container:
 
 ```bash
-git clone https://github.com/<your-username>/sdrpp-docker.git
+git clone https://github.com/mw1fly/sdrpp-docker.git
 cd sdrpp-docker
 docker build -t sdrpp .
 ```
@@ -39,7 +39,6 @@ docker run -it --rm \
   sdrpp
 ```
 
----
 
 This will start sdrpp inside the container with X11 forwarding.
 Your SDR++ config files are stored in /root/.config/sdrpp inside the container.
@@ -50,6 +49,14 @@ docker run -it --rm \
   -v $HOME/.config/sdrpp:/root/.config/sdrpp \
   sdrpp
 ```
+
+Allow X11 from docker 
+```bash
+xhost +local:root
+```
+
+run_sdrpp.sh - Start script example.
+dockbash.sh  - Drop into the consinter 
 
 ---
 
