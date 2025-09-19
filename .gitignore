@@ -1,0 +1,46 @@
+# Ignore build artifacts
+/build/
+**/build/
+*.o
+*.so
+*.a
+*.la
+*.lo
+*.cmake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Ignore Docker related junk
+*.tar
+*.log
+.dockerignore
+
+# Ignore local development stuff
+*.swp
+*.swo
+*~
+*.bak
+
+# Ignore Python cache (if you use helper scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore installed SDR++ sources (don’t want to push upstream repo clones)
+opt/
+external_modules/
+
+# But keep our config files and Docker build context
+!Dockerfile
+!docker-compose.yml
+!*.sh
+!*.conf
+!*.yaml

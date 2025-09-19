@@ -1,0 +1,7 @@
+{
+    "Radiosonde": {
+        "gpxPath": "/tmp\\radiosonde.gpx",
+        "ptuPath": "/tmp\\radiosonde_ptu.csv",
+        "sondeType": 0
+    }
+}

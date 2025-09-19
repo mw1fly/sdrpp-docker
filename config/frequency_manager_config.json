@@ -1,0 +1,16 @@
+{
+    "bookmarkDisplayMode": 1,
+    "lists": {
+        "General": {
+            "bookmarks": {
+                "Radio 1": {
+                    "bandwidth": 150000.0,
+                    "frequency": 99500000.0,
+                    "mode": 1
+                }
+            },
+            "showOnWaterfall": true
+        }
+    },
+    "selectedList": "General"
+}

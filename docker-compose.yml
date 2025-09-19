@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  sdrpp:
+    build: .
+    container_name: sdrpp
+    environment:
+      - DISPLAY=${DISPLAY}
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ${HOME}/.Xauthority:/root/.Xauthority:ro
+      - sdrpp-config:/root/.config/sdrpp
+    devices:
+      - /dev/bus/usb:/dev/bus/usb   # expose SDR dongles
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    stdin_open: true
+    tty: true
+    runtime: nvidia   # needed for docker-compose v2
+
+volumes:
+  sdrpp-config:

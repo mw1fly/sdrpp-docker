@@ -1,0 +1,13 @@
+{
+    "device": "",
+    "devices": {
+        "0000000000000000010961dc295a994f": {
+            "amp": false,
+            "bandwidth": 16,
+            "biasT": false,
+            "lnaGain": 24,
+            "sampleRate": 2000000,
+            "vgaGain": 20
+        }
+    }
+}
