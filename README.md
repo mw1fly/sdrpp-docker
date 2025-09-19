@@ -22,7 +22,7 @@ Clone this repo and build the container:
 git clone https://github.com/<your-username>/sdrpp-docker.git
 cd sdrpp-docker
 docker build -t sdrpp .
-
+```
 
 ---
 
@@ -37,6 +37,7 @@ docker run -it --rm \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   sdrpp
+```
 
 ---
 
@@ -48,6 +49,7 @@ If you want persistent configs, mount a volume:
 docker run -it --rm \
   -v $HOME/.config/sdrpp:/root/.config/sdrpp \
   sdrpp
+```
 
 ---
 
@@ -61,7 +63,7 @@ Enabled with:
 
 ```bash
 -DOPT_BUILD_RADIOSONDE_DECODER=ON
-
+```
 ---
 
 M17 Decoder
@@ -70,7 +72,7 @@ Enabled with:
 
 ```bash
 -DOPT_BUILD_M17_DECODER=ON
-
+```
 ---
 
 FreeDV / DSD
@@ -103,8 +105,6 @@ Add persistent audio device mapping examples
 
 Automate additional plugin inclusion
 
-
-```bash
 
 ---
 
